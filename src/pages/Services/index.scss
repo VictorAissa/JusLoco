@@ -1,0 +1,15 @@
+.services_container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    h1 {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    .service_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+        padding: 10rem 5rem 0 5rem;
+    }
+}

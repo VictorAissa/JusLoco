@@ -1,0 +1,22 @@
+@import "../../utils/style/variables.scss";
+
+#about {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 5rem 15%;
+    background-color: #f5ae3d;
+    align-self: center;
+    img {
+        min-width: 15rem;
+        width: 30vw;
+        max-width: 32rem;
+        align-self: center;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+
+    .about_description {
+        padding: 2rem;
+    }
+}

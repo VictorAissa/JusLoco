@@ -1,0 +1,24 @@
+@import "../../utils/style/variables.scss";
+
+.info {
+    display: flex;
+    gap: 2%;
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+    .img-wrapper {
+        min-width: 15rem;
+        width: 100vw;
+        max-width: 40rem;
+    }
+    .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .info_description {
+        padding: 3%;
+        height: fit-content;
+        background-color: #fff;
+    }
+}

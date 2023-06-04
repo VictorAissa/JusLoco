@@ -1,0 +1,35 @@
+@import "../../utils//style/variables.scss";
+
+.footer_container {
+    height: 8rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: #313532;
+    color: #fff;
+    .social {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        a,
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        i {
+            color: #fff;
+            font-size: 2rem;
+        }
+        // img {
+        //     height: 2rem;
+        // }
+    }
+    .footer-text {
+        display: flex;
+        align-items: center;
+    }
+    .button {
+        width: 2rem;
+        height: 2rem;
+    }
+}
