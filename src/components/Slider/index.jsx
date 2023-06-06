@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import arrowLeft from "../../assets/arrow_left.png";
-import arrowRight from "../../assets/arrow_right.png";
+// import arrowLeft from "../../assets/arrow_left.png";
+// import arrowRight from "../../assets/arrow_right.png";
 import "./index.scss";
 
 function Slider(props) {
@@ -8,10 +8,10 @@ function Slider(props) {
     const pictures = props.images;
     const totalSlides = pictures?.length;
 
-    const previousSlide = () =>
-        setCurrentSlide(
-            currentSlide === 0 ? totalSlides - 1 : currentSlide - 1
-        );
+    // const previousSlide = () =>
+    //     setCurrentSlide(
+    //         currentSlide === 0 ? totalSlides - 1 : currentSlide - 1
+    //     );
     const nextSlide = () =>
         setCurrentSlide(
             currentSlide === totalSlides - 1 ? 0 : currentSlide + 1
@@ -43,7 +43,7 @@ function Slider(props) {
             ))}
 
             {/* Création des éléments de navigation entre les slides si le slider comprend plus d'une image */}
-            {totalSlides > 1 && (
+            {/* {totalSlides > 1 && (
                 <nav>
                     <img
                         className="arrow"
@@ -65,7 +65,7 @@ function Slider(props) {
                         }}
                     />
                 </nav>
-            )}
+            )} */}
         </div>
     );
 }
