@@ -1,7 +1,10 @@
+@import "../../utils//style/variables.scss";
+
 .service {
-    width: 100%;
-    max-width: 80rem;
-    height: 50rem;
+    width: calc(0.7 * 100vw);
+    max-width: $max-img-width;
+    height: calc(0.5 * 100vw);
+    max-height: calc(0.7 * $max-img-width);
     display: flex;
     flex-direction: column;
     align-items: center;

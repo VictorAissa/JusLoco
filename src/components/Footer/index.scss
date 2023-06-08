@@ -1,11 +1,17 @@
 @import "../../utils//style/variables.scss";
 
 .footer_container {
-    height: 8rem;
+    width: 100%;
+    height: $footer-header_desktop;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #313532;
     color: #fff;
+    padding: 0 5%;
+
     .social {
         display: flex;
         align-items: center;

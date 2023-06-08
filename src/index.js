@@ -12,6 +12,7 @@ import RootLayout from "./layouts/rootLayout";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 import "./index.scss";
 
 const router = createBrowserRouter(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
         <Route path="/" element={<RootLayout />}>
             <Route index element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Error />} />
         </Route>
     )

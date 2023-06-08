@@ -43,6 +43,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    position: relative;
 }
 
 /* A elements that don't have a class get default styles */
@@ -75,6 +76,11 @@ html {
 
 /* *** */
 
+#root,
+.root_layout {
+    height: 100%;
+}
+
 html {
     font-family: "source sans pro";
     font-size: 1rem;
@@ -87,6 +93,7 @@ h2 {
 }
 
 main {
+    height: 100%;
     display: flex;
     flex-direction: column;
     padding: 7rem 0;

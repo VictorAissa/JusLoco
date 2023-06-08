@@ -1,0 +1,36 @@
+@import "../../utils//style/variables.scss";
+
+@mixin input-style {
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.contact-form_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 1.2rem;
+    padding: 3rem;
+    background-color: #ffffffa4;
+    input {
+        @include input-style;
+    }
+    textarea {
+        @include input-style;
+        resize: none;
+    }
+    button {
+        width: fit-content;
+        align-self: center;
+        border: none;
+        border-radius: 0.3rem;
+        background-color: #f29c0e;
+        color: #fff;
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        padding: 0.3rem 1rem;
+        cursor: pointer;
+    }
+}

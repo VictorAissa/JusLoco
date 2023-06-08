@@ -22,6 +22,9 @@ function Header() {
                     >
                         <span>About</span>
                     </ScrollLink> */}
+                    <Link to="/" className="main-nav-item">
+                        <span>Home</span>
+                    </Link>
                     <Link to="/#about" className="main-nav-item">
                         <span>About</span>
                     </Link>

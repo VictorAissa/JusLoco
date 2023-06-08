@@ -1,10 +1,10 @@
 import "./index.scss";
 import logo from "../../assets/logo-jus-loco-980x239.png";
 import cover from "../../assets/cover-02.png";
-import img1 from "../../assets/pics/alex-lvrs--ZvC04d-xLw-unsplash.jpg";
-import img2 from "../../assets/pics/alina-karpenko-jH1PBHevj38-unsplash.jpg";
-import img3 from "../../assets/pics/nathan-dumlao-dH67nSuFkv8-unsplash.jpg";
-import img4 from "../../assets/pics/pablo-de-la-fuente-aD3i5aWJUKM-unsplash.jpg";
+import img1 from "../../assets/pics/alex-lvrs-ZvC04d-xLw-unsplash.avif";
+import img2 from "../../assets/pics/alina-karpenko-jH1PBHevj38-unsplash.avif";
+import img3 from "../../assets/pics/nathan-dumlao-dH67nSuFkv8-unsplash.avif";
+import img4 from "../../assets/pics/pablo-de-la-fuente-aD3i5aWJUKM-unsplash.avif";
 import Info from "../../components/Info";
 import About from "../../components/About";
 import { useLocation } from "react-router-dom";
