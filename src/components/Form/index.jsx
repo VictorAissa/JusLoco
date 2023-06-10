@@ -25,6 +25,7 @@ function Form({ onMessage, onSuccess }) {
             const data = await response.json();
             console.log(data);
             setResMessage(data);
+            form.reset();
         } catch (error) {
             setResMessage(error);
         }
@@ -54,7 +55,10 @@ function Form({ onMessage, onSuccess }) {
                 id="emailField"
             />
             <label htmlFor="messageField">Message</label>
-            <textarea placeholder="Salut Johnny …" id="messageField"></textarea>
+            <textarea
+                placeholder="Salut Jordane, tu vas bien ?"
+                id="messageField"
+            ></textarea>
             <button type="submit">Envoyer</button>
         </form>
     );

@@ -1,3 +1,5 @@
+@import "./utils//style/variables.scss";
+
 /* ***  Normalizer  *** */
 
 /* Box sizing rules */
@@ -40,6 +42,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+    height: 100%;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -70,15 +73,16 @@ select {
 }
 
 /* Font-size html relatif avec valeur de base 1rem=10px */
-html {
-    font-size: 62.5%;
-}
+// html {
+//     font-size: 62.5%;
+// }
 
 /* *** */
 
 #root,
 .root_layout {
     height: 100%;
+    min-height: 100vh;
 }
 
 html {
@@ -94,11 +98,10 @@ h2 {
 
 main {
     height: 100%;
+    min-height: calc(100vh - $footer-header_desktop);
     display: flex;
     flex-direction: column;
-    padding: 7rem 0;
-    // background-image: url(./assets/fond.png);
-    // background-size: contain;
+    padding-top: $footer-header_desktop;
 }
 
 .centered-text-content {

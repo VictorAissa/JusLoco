@@ -1,8 +1,8 @@
 @import "../../utils//style/variables.scss";
+@import "../../utils/style/mixins.scss";
 
 .services_container {
-    display: flex;
-    flex-direction: column;
+    @include page-shrink;
     padding: 3rem;
     h1 {
         margin-bottom: 3rem;

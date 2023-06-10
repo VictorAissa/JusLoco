@@ -1,13 +1,10 @@
 @import "../../utils//style/variables.scss";
+@import "../../utils/style/mixins.scss";
 
-@mixin input-style {
-    border: none;
-    border-radius: 0.3rem;
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.8rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
 .contact-form_container {
+    width: 40%;
+    min-width: 30rem;
+    max-width: 70rem;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -19,6 +16,7 @@
     }
     textarea {
         @include input-style;
+        height: 6rem;
         resize: none;
     }
     button {
@@ -28,9 +26,9 @@
         border-radius: 0.3rem;
         background-color: #f29c0e;
         color: #fff;
-        margin-top: 1rem;
         font-size: 1.4rem;
         padding: 0.3rem 1rem;
+        margin-top: 1rem;
         cursor: pointer;
     }
 }

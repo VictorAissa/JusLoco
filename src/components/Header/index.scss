@@ -6,6 +6,14 @@
     position: fixed;
     background-color: #ffffff;
     z-index: 10;
+    .header_overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #0000003f;
+    }
     .main-nav {
         height: 100%;
         display: flex;
@@ -14,18 +22,16 @@
         padding: 0 3rem;
         .main-nav-logo {
             height: 100%;
+            width: 7rem;
+            min-width: 7rem;
             display: flex;
             align-items: center;
-            img {
-                width: 100px;
-            }
         }
         .inside-nav {
             display: flex;
             gap: 1rem;
         }
-        .main-nav-item {
-            text-decoration: none;
+        .inside-nav_item {
             margin-right: 0.5rem;
             display: flex;
             gap: 5px;
@@ -37,6 +43,35 @@
         .main-nav-logo-image {
             max-width: 100%;
             width: 200px;
+        }
+        .burger_container {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.3rem;
+            .burger_item {
+                width: 2.2rem;
+                height: 0.4rem;
+                background-color: $grey;
+                border-radius: 0.1rem;
+            }
+        }
+        .small-menu_container {
+            position: fixed;
+            top: 0;
+            right: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem;
+            background-color: #fff;
+            z-index: 20;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+            &.open {
+                transform: translateY(0);
+            }
         }
     }
 }

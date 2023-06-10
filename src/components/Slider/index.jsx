@@ -20,7 +20,7 @@ function Slider(props) {
     useEffect(() => {
         setTimeout(() => {
             nextSlide();
-        }, 3000);
+        }, 4000);
     });
 
     return (

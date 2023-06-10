@@ -7,7 +7,7 @@ function Modal({ isOpen, toggle, title, description }) {
             <div className="modal_overlay" onClick={toggle}>
                 <div className="modal_content animate__animated animate__backInUp">
                     <h3>{title}</h3>
-                    <p>{description}</p>
+                    <div className="modal_description">{description}</div>
                     <button onClick={toggle}>X</button>
                 </div>
             </div>

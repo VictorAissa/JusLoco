@@ -12,7 +12,6 @@ function Footer() {
     const [isOpen, setIsOpen] = useState(false);
     const fbUrl = "https://www.facebook.com/people/Joohn-Doe";
     const linkedinUrl = "https://www.linkedin.com/in/john-doe";
-    const mailAdress = "mailto:john.doe@jusloco.fr";
 
     const toggleModal = () => {
         isOpen ? setIsOpen(false) : setIsOpen(true);
@@ -33,7 +32,7 @@ function Footer() {
                 }
             />
             <div className="social">
-                <Link to={mailAdress} target="_blank">
+                <Link to="/contact">
                     {/* <img src={logoMail} alt="logo mail" /> */}
                     <i className="fa-solid fa-paper-plane"></i>
                 </Link>

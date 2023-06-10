@@ -1,6 +1,6 @@
 import "./index.scss";
 import logo from "../../assets/logo-jus-loco-980x239.png";
-import cover from "../../assets/cover-02.png";
+import cover from "../../assets/cover-02.avif";
 import img1 from "../../assets/pics/alex-lvrs-ZvC04d-xLw-unsplash.avif";
 import img2 from "../../assets/pics/alina-karpenko-jH1PBHevj38-unsplash.avif";
 import img3 from "../../assets/pics/nathan-dumlao-dH67nSuFkv8-unsplash.avif";
@@ -25,7 +25,7 @@ function Home() {
     }, [location]);
 
     return (
-        <>
+        <div className="home_container">
             <section className="hero">
                 <img src={cover} alt="Bouteilles de jus" />
                 <div className="hero-content">
@@ -65,7 +65,7 @@ function Home() {
                 />
             </section>
             <About className="smooth-scroll-link" />
-        </>
+        </div>
     );
 }
 

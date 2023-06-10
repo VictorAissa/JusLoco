@@ -1,4 +1,4 @@
-import portrait from "../../assets/portrait.png";
+import portrait from "../../assets/portrait.avif";
 import "./index.scss";
 
 function About() {
