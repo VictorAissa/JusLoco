@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./index.scss";
 import Modal from "../Modal";
+import DropMenu from "../DropMenu";
 // import logoFb from "../../assets/logos/logo_facebook.png";
 // import logoIg from "../../assets/logos/logo_instagram.png";
 // import logoMail from "../../assets/logos/logo_mail.png";
@@ -9,18 +10,27 @@ import Modal from "../Modal";
 // import logoLinkedin from "../../assets/logos/logo_liknkedin.png";
 
 function Footer() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const fbUrl = "https://www.facebook.com/people/Joohn-Doe";
     const linkedinUrl = "https://www.linkedin.com/in/john-doe";
+    const desktopResolution = windowWidth > 720;
 
     const toggleModal = () => {
-        isOpen ? setIsOpen(false) : setIsOpen(true);
+        modalOpen ? setModalOpen(false) : setModalOpen(true);
     };
+    const toggleMenu = () => {
+        setMenuOpen((prevState) => !prevState);
+    };
+    // const toggleModal = () => {
+    //     setModalOpen((prevState) => !prevState);
+    // };
 
     return (
         <footer className="footer_container">
             <Modal
-                isOpen={isOpen}
+                isOpen={modalOpen}
                 toggle={toggleModal}
                 title={"Contact"}
                 description={
@@ -31,24 +41,64 @@ function Footer() {
                     </div>
                 }
             />
-            <div className="social">
-                <Link to="/contact">
-                    {/* <img src={logoMail} alt="logo mail" /> */}
-                    <i className="fa-solid fa-paper-plane"></i>
-                </Link>
-                <button onClick={toggleModal}>
-                    {/* <img src={logoPhone} alt="logo téléphone" /> */}
-                    <i className="fa-solid fa-phone"></i>
-                </button>
-                <Link to={fbUrl} target="_blank">
-                    {/* <img src={logoFb} alt="logo facebook" /> */}
-                    <i className="fa-brands fa-facebook"></i>
-                </Link>
-                <Link to={linkedinUrl} target="_blank">
-                    {/* <img src={logoLinkedin} alt="logo LinkeIn" /> */}
-                    <i className="fa-brands fa-linkedin"></i>
-                </Link>
-            </div>
+            {desktopResolution ? (
+                <div className="social">
+                    <Link to="/contact">
+                        <i className="fa-solid fa-paper-plane"></i>
+                    </Link>
+                    <button onClick={toggleModal}>
+                        <i className="fa-solid fa-phone"></i>
+                    </button>
+                    <Link to={fbUrl} target="_blank">
+                        <i className="fa-brands fa-facebook"></i>
+                    </Link>
+                    <Link to={linkedinUrl} target="_blank">
+                        <i className="fa-brands fa-linkedin"></i>
+                    </Link>
+                </div>
+            ) : (
+                <div className="social-shortcut">
+                    <i
+                        class="fa-solid fa-hashtag"
+                        onClick={() => toggleMenu()}
+                    ></i>
+                    <DropMenu
+                        isOpen={menuOpen}
+                        toggle={() => toggleMenu()}
+                        direction="up"
+                        position="left"
+                    >
+                        <Link to="/contact">
+                            <i
+                                className="fa-solid fa-paper-plane"
+                                onClick={() => toggleMenu()}
+                            ></i>
+                        </Link>
+                        <button
+                            onClick={() => {
+                                toggleMenu();
+                                toggleModal();
+                            }}
+                        >
+                            <i className="fa-solid fa-phone"></i>
+                        </button>
+                        <Link
+                            to={fbUrl}
+                            target="_blank"
+                            onClick={() => toggleMenu()}
+                        >
+                            <i className="fa-brands fa-facebook"></i>
+                        </Link>
+                        <Link
+                            to={linkedinUrl}
+                            target="_blank"
+                            onClick={() => toggleMenu()}
+                        >
+                            <i className="fa-brands fa-linkedin"></i>
+                        </Link>
+                    </DropMenu>
+                </div>
+            )}
             <p className="footer-text">Mentions légales JusLoco®</p>
         </footer>
     );

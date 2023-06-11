@@ -1,11 +1,15 @@
+import { useState } from "react";
 import "./index.scss";
 
 function Info({ image, title, description, reverse }) {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const rowDirection = reverse && "reverse";
     const fade = reverse ? "fade-left" : "fade-right";
+    const desktopResolution = windowWidth > 720;
+
     return (
         <article
-            data-aos={fade}
+            data-aos={desktopResolution ? fade : "flip-left"}
             data-aos-duration="1000"
             className={`info ${rowDirection}`}
         >

@@ -9,6 +9,11 @@
     background-color: #f5ae3d;
     align-self: center;
     margin-bottom: 5rem;
+    @media (max-width: $mobile) {
+        width: 100%;
+        padding: 2rem 10%;
+        gap: 0;
+    }
     img {
         min-width: 15rem;
         width: 30vw;
@@ -18,5 +23,8 @@
     }
     .about_description {
         padding: 2rem;
+        @media (max-width: $mobile) {
+            padding: 1rem;
+        }
     }
 }

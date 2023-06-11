@@ -70,6 +70,9 @@ textarea,
 select {
     font: inherit;
     padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 /* Font-size html relatif avec valeur de base 1rem=10px */

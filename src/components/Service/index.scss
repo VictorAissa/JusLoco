@@ -9,6 +9,12 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    @media (max-width: $mobile) {
+        width: auto;
+        height: auto;
+        display: block;
+        position: initial;
+    }
     img {
         height: 100%;
         object-fit: cover;
@@ -21,6 +27,14 @@
         padding: 2rem;
         h2 {
             margin-bottom: 2rem;
+            @media (max-width: $mobile) {
+                margin-bottom: 1rem;
+            }
+        }
+        @media (max-width: $mobile) {
+            width: auto;
+            position: unset;
+            padding: 2rem 0;
         }
     }
 }

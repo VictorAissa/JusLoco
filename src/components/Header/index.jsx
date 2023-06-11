@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import DropMenu from "../DropMenu";
+import BurgerMenu from "../BurgerMenu";
 import logo from "../../assets/logo-jus-loco-980x239.png";
 import "./index.scss";
 
@@ -22,17 +24,8 @@ function Header() {
     //     };
     // }, []);
 
-    console.log("isOpen " + isOpen);
-
     return (
         <header className="header_container">
-            {isOpen && (
-                <div
-                    className="header_overlay"
-                    onClick={() => toggleBurger()}
-                ></div>
-            )}
-
             <nav className="main-nav">
                 <Link to="/" className="main-nav-logo">
                     <img src={logo} alt="Logo JusLoco" />
@@ -54,10 +47,11 @@ function Header() {
                     </ul>
                 ) : (
                     <>
-                        <ul
-                            className={`small-menu_container ${
-                                isOpen ? "open" : ""
-                            }`}
+                        <DropMenu
+                            isOpen={isOpen}
+                            toggle={() => toggleBurger()}
+                            direction="down"
+                            position="right"
                         >
                             <li className="inside-nav_item">
                                 <Link to="/" onClick={() => toggleBurger()}>
@@ -88,15 +82,8 @@ function Header() {
                                     Contact
                                 </Link>
                             </li>
-                        </ul>
-                        <div
-                            className="burger_container"
-                            onClick={() => toggleBurger()}
-                        >
-                            <div className="burger_item"></div>
-                            <div className="burger_item"></div>
-                            <div className="burger_item"></div>
-                        </div>
+                        </DropMenu>
+                        <BurgerMenu toggle={() => toggleBurger()} />
                     </>
                 )}
             </nav>

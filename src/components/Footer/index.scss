@@ -23,9 +23,16 @@
             color: #fff;
             font-size: 2rem;
         }
-        // img {
-        //     height: 2rem;
-        // }
+    }
+    .social-shortcut {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.4rem;
+        i {
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
     }
     .footer-text {
         display: flex;

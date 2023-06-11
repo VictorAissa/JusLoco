@@ -29,8 +29,8 @@ function Services() {
 
     return (
         <section className="services_container">
-            <h1>Prestations</h1>
             <Slider images={images} />
+            <h1>Prestations</h1>
             <div className="service_wrapper">
                 <Service
                     image={img7}

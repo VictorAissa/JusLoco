@@ -1,0 +1,15 @@
+@import "../../utils//style/variables.scss";
+
+.burger_container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+    .burger_item {
+        width: 2.2rem;
+        height: 0.4rem;
+        background-color: $grey;
+        border-radius: 0.1rem;
+    }
+}
