@@ -59,7 +59,7 @@ function Footer() {
             ) : (
                 <div className="social-shortcut">
                     <i
-                        class="fa-solid fa-hashtag"
+                        className="fa-solid fa-hashtag"
                         onClick={() => toggleMenu()}
                     ></i>
                     <DropMenu

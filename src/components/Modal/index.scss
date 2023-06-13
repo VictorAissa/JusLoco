@@ -14,7 +14,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #333333d3;
+        background-color: #0000003f;
     }
     .modal_content {
         width: clamp(30rem, 60%, 50rem);
@@ -32,16 +32,11 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
-            width: 2rem;
-            height: 2rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: #fff;
-            background-color: crimson;
-            border: none;
+            font-size: 1.7rem;
+            color: grey;
             cursor: pointer;
         }
         h3 {

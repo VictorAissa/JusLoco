@@ -8,7 +8,9 @@ function Modal({ isOpen, toggle, title, description }) {
                 <div className="modal_content animate__animated animate__backInUp">
                     <h3>{title}</h3>
                     <div className="modal_description">{description}</div>
-                    <button onClick={toggle}>X</button>
+                    <button onClick={toggle}>
+                        <i className="fa-solid fa-xmark"></i>
+                    </button>
                 </div>
             </div>
         </div>
