@@ -41,6 +41,15 @@ function Slider(props) {
                     }}
                 />
             ))}
+            <div className="bullet-points_container">
+                {pictures.map((picture, index) => {
+                    return index === currentSlide ? (
+                        <div key={picture} className="dot dot_selected"></div>
+                    ) : (
+                        <div key={picture} className="dot"></div>
+                    );
+                })}
+            </div>
 
             {/* Création des éléments de navigation entre les slides si le slider comprend plus d'une image */}
             {/* {totalSlides > 1 && (
