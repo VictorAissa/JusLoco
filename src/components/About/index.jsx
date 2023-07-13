@@ -6,7 +6,7 @@ function About() {
         <section id="about">
             <img src={portrait} alt="Portrait de Jordane" />
             <div className="about_description">
-                <h2>C'est moi Jordane, je suis un fou nanani</h2>
+                <h2>Salut, c'est moi Jordane</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Eaque provident ab asperiores nulla odio quae nemo
